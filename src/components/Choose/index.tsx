@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../ui/Button";
 import styles from "./styles.module.css";
 import CheckBox from "../ui/CheckBox";
@@ -10,7 +10,7 @@ interface CheckBoxOption {
 }
 
 const Choose = () => {
-  const [allChecked, setAllChecked] = useState(false);
+  const [allChecked, setAllChecked] = useState<boolean>(false);
   const [checkBoxOptions, setCheckBoxOptions] = useState<CheckBoxOption[]>([
     { id: "1", value: "Page 1", checked: false },
     { id: "2", value: "Page 2", checked: true },
@@ -38,6 +38,11 @@ const Choose = () => {
       })
     );
   };
+
+  useEffect(() => {
+    const allChecked = checkBoxOptions.every((item) => item.checked);
+    setAllChecked(allChecked);
+  }, [checkBoxOptions]);
 
   return (
     <div className={styles.choose}>
