@@ -1,0 +1,33 @@
+:root {
+  --font-family: Montserrat;
+
+  --color-primary-100: #ffce22;
+  --color-primary-200: #ffd84d;
+  --color-primary-300: #ffce22;
+
+  --color-secondary-100: #5087f8;
+  --color-secondary-200: #2469f6;
+
+  --color-gray-100: #cdcdcd;
+  --color-gray-200: #bdbdbd;
+
+  --color-btn: var(--color-primary-100);
+  --color-btn-hover: var(--color-primary-200);
+  --color-btn-active: var(--color-primary-300);
+
+  --color-text: #1f2128;
+  --color-border: #eeeeee;
+
+  --shadow: 0px 8px 15px 0px rgba(20, 20, 20, 0.12);
+  --shadow-2: 0px 0px 4px 0px rgba(20, 20, 20, 0.1);
+}
+
+body {
+  font-family: var(--font-family), sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  color: var(--color-text);
+  height: 100vh;
+}

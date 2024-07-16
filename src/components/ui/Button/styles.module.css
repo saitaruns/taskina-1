@@ -1,0 +1,19 @@
+button {
+  background-color: var(--color-btn);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  border: none;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
+  min-height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-btn-hover);
+}
+
+.button:active {
+  background-color: var(--color-btn-active);
+}
